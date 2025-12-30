@@ -192,7 +192,7 @@ article {
   justify-content: center;
   align-items: center;
   font-size: 16px;
-  color: var(--orange-yellow-crayola);
+  color: #64ffda;
   box-shadow: var(--shadow-1);
   z-index: 1;
 }
@@ -479,7 +479,7 @@ main {
   color: var(--light-gray);
   font-size: var(--fs-8);
   padding: 20px 7px;
-  transition: color var(--transition-2);
+  transition: color var(--transition-1);
 }
 
 .navbar-link:hover,
@@ -818,7 +818,7 @@ main {
   left: -33px;
   height: 6px;
   width: 6px;
-  background: var(--text-gradient-yellow);
+  background: #64ffda;
   border-radius: 50%;
   box-shadow: 0 0 0 4px var(--jet);
 }
@@ -1372,13 +1372,35 @@ textarea.form-input::-webkit-resizer { display: none; }
   /**
    * #NAVBAR
    */
+/**
+ * Menghubungkan style toggle-buttons dengan layout navbar lama
+ */
+.toggle-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  /* Mengambil style dari .navbar-list Anda */
+  gap: 20px; 
+}
 
-  .navbar { border-radius: 20px 20px 0 0; }
+.toggle-buttons__item {
+  display: flex;
+}
 
-  .navbar-list { gap: 20px; }
+/* Memastikan button memiliki behavior yang sama dengan link sebelumnya */
+.toggle-buttons__button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  transition: 0.25s ease;
+}
 
-  .navbar-link { --fs-8: 14px; }
-
+/* Style active tetap mengikuti CSS asli template */
+.navbar-link.active {
+  color: var(#64ffda);
+}
 
 
   /**
